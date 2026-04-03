@@ -2,9 +2,9 @@ import { ToggleSwitch } from 'flowbite-react';
 import React, { useState } from 'react'
 
 const Header = () => {
-//     const toggleDark = () => {
-//     document.documentElement.classList.toggle("dark");
-//   };
+    const toggleDark = () => {
+    document.documentElement.classList.toggle("dark");
+  };
   const [switch1, setSwitch1] = useState(true);
 
   return (
@@ -15,14 +15,9 @@ const Header = () => {
         </div>
         <div className="flex max-w-md items-center flex-row gap-4 me-5 ms-5 ">
             <h3>Dark Mode</h3>
-      <ToggleSwitch checked={switch1} onChange={setSwitch1} />
+      <ToggleSwitch checked={switch1} onChange={setSwitch1} onClick={toggleDark}/>
     </div>
-        {/* <div className='me-5'>
-          <h3>Dark Mode</h3>
-          <button onClick={toggleDark}>
-      Toggle Dark Mode
-    </button>
-        </div> */}
+        
       </div>
   )
 }
